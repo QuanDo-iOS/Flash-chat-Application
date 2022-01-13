@@ -9,6 +9,6 @@
 import Foundation
 
 struct Messages {
-    let sender : String
-    let body : String 
+    let sender : String // it's contain the email address of the person who send the message
+    let body : String   // it's contain the content of the message
 }
