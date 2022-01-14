@@ -37,7 +37,24 @@ class ChatViewController: UIViewController {
         messages = []
         
         db.collection(K.FStore.collectionName).getDocuments { querySnapshot, error in
-            
+            if let e = error {
+                print("There is an issue retrieving data from Firestore \(e)")
+            } else {
+                if let snapshotDocument = querySnapshot?.documents {
+                    for doc in snapshotDocument {
+                        let data = doc.data()
+                        if let messageSender = data[K.FStore.senderField] as? String , let messageBody = data[K.FStore.bodyField] as? String {
+                            let newMessage = Messages(sender: messageSender, body: messageBody)
+                            self.messages.append(newMessage)
+                            
+                            DispatchQueue.main.async{
+                                self.tableView.reloadData()
+                            }
+                            
+                        }
+                    }
+                }
+            }
         }
     }
     
