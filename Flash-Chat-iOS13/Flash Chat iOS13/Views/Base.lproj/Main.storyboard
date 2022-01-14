@@ -330,6 +330,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="❤️ChatWithNa❤️" id="Q5u-eL-Bgp">
                         <barButtonItem key="rightBarButtonItem" title="Log out" id="u6h-mO-uts">
+                            <color key="tintColor" systemColor="systemRedColor"/>
                             <connections>
                                 <action selector="logOutPressed:" destination="lwd-AH-u8E" id="qP6-1o-qiu"/>
                             </connections>
@@ -352,6 +353,8 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="7gK-TM-9LV">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" systemColor="systemPinkColor"/>
+                        <color key="barTintColor" systemColor="systemPinkColor"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -369,7 +372,7 @@
         </designable>
     </designables>
     <inferredMetricsTieBreakers>
-        <segue reference="k96-G5-amZ"/>
+        <segue reference="HoV-lv-IpM"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="paperplane.fill" catalog="system" width="128" height="118"/>
@@ -388,6 +391,9 @@
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
